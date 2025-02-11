@@ -7,6 +7,9 @@ toggle.addEventListener("click", () => {
 });
 </script>
 
+<meta name="theme-color"
+    content="#ff5733">
+
 .label .input:checked ~ .title {
     opacity: 0;
     visibility: visible;
@@ -52,6 +55,14 @@ main {
 h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  animation: typing 2s steps(20) infinite 
+  alternate-reverse;
+}
+
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
 }
 
 .buttons {
@@ -60,6 +71,10 @@ h2 {
   align-items: center;
   gap: 1rem;
 }
+
+<h1 class="animate_animated"
+           animate_zoomIn
+           animate_infinite">Hello!</h1>
 
 .btn {
   display: inline-block;
