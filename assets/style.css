@@ -6,8 +6,9 @@ toggle.addEventListener("click", () => {
     menu.style.display = menu.style.display === "center" ? "none" : "flex";
 });
 </script>
-      
 
+@-moz-keyframes  moveBackground { {
+}
     from {
         background: red;
     }
@@ -15,9 +16,6 @@ toggle.addEventListener("click", () => {
     to {
         background: yellow;
     }
-}
-
-@-moz-keyframes  moveBackground { {
 }
 
 @-webkit-keyframes  moveBackground { {
@@ -41,7 +39,6 @@ body {
   margin: 0;
   padding: 0;
   color: #fff;
-  color: #fff;
   text-align: center;
 }
 
@@ -57,13 +54,13 @@ header {
 }
 
 .hero p {
-  font-size: 1,2rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
 main {
   padding: 2rem;
-  text-align: 1rem;
+  text-padding: 1rem;
 }
 
 h2 {
