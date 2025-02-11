@@ -7,20 +7,6 @@ toggle.addEventListener("click", () => {
 });
 </script>
 
-@-moz-keyframes  moveBackground { {
-}
-    from {
-        background: red;
-    }
-
-    to {
-        background: yellow;
-    }
-}
-
-@-webkit-keyframes  moveBackground { {
-}
-
 .label .input:checked ~ .title {
     opacity: 0;
     visibility: visible;
@@ -86,15 +72,15 @@ h2 {
   transition: background 0.3s ease;
 }
 
-.btn:hover {
+.btn: hover {
   background: #e91e63;
 }
 
 footer {
   text-align: center;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0, 7);
-  position: relative;
+  background: rgba(0, 0, 0, 7);
+  position: center;
 }
 
 img {
@@ -110,4 +96,5 @@ img {
 
 .glowing-button {
     margin-bottom: 20px;
+    text-align: 10px;
 }
