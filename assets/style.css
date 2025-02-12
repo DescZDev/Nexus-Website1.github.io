@@ -53,6 +53,10 @@ main {
 }
 
 h2 {
+  width: 20ch;
+  font-family: monospace;
+  text-wrap: nowrap;
+  overflow: hidden;
   font-size: 1.8rem;
   margin-bottom: 1rem;
   animation: typing 2s steps(20) infinite 
