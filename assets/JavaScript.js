@@ -1,7 +1,13 @@
-document.getElementById("open-btn").addEventListener("click", function () {
-    document.getElementById("sidebar").classList.add("sidebar-active");
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.getElementById("sidebar");
+    const openBtn = document.getElementById("open-btn");
+    const closeBtn = document.getElementById("close-btn");
 
-document.getElementById("close-btn").addEventListener("click", function () {
-    document.getElementById("sidebar").classList.remove("sidebar-active");
+    openBtn.addEventListener("click", function () {
+        sidebar.style.left = "0"; // Open sidebar
+    });
+
+    closeBtn.addEventListener("click", function () {
+        sidebar.style.left = "-250px"; // Close sidebar
+    });
 });
