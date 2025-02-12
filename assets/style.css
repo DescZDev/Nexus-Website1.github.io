@@ -7,6 +7,93 @@ toggle.addEventListener("click", () => {
 });
 </script>
 
+/* Sidebar Container */
+#sidebar {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    background: rgba(15, 15, 15, 0.95);
+    box-shadow: 2px 0 10px rgba(255, 0, 0, 0.5);
+    transition: 0.4s ease-in-out;
+    padding-top: 20px;
+    text-align: center;
+    overflow-y: auto;
+}
+
+/* Sidebar Header (Logo) */
+#sidebar-header img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid red;
+}
+
+/* Sidebar Links */
+#sidebar a {
+    display: block;
+    font-size: 18px;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 8px;
+    margin: 8px;
+    background: rgba(255, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#sidebar a i {
+    font-size: 20px;
+}
+
+#sidebar a:hover {
+    background: red;
+    color: black;
+}
+
+/* "Soon" Text */
+.soon {
+    color: red;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+/* Open & Close Buttons */
+#open-btn, #close-btn {
+    font-size: 24px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+#close-btn {
+    right: 20px;
+    top: 10px;
+    position: absolute;
+}
+
+/* Open Button Position */
+#open-btn {
+    left: 20px;
+}
+
+/* Sidebar Active */
+.sidebar-active {
+    left: 0 !important;
+}
+
 <meta name="theme-color"
     content="#ff5733">
 
