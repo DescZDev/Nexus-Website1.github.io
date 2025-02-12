@@ -13,7 +13,7 @@ toggle.addEventListener("click", () => {
     height: 100vh;
     position: fixed;
     top: 0;
-    left: -300px;
+    left: -350px;
     background: rgba(15, 15, 15, 0.95);
     box-shadow: 2px 0 10px rgba(255, 0, 0, 0.5);
     transition: 0.4s ease-in-out;
@@ -24,7 +24,7 @@ toggle.addEventListener("click", () => {
 
 /* Sidebar Header (Logo) */
 #sidebar-header img {
-    width: 100px;
+    width: auto;
     height: auto;
     border-radius: 50%;
     margin-bottom: 15px;
@@ -66,7 +66,7 @@ toggle.addEventListener("click", () => {
 
 /* Open & Close Buttons */
 #open-btn, #close-btn {
-    font-size: 24px;
+    font-size: 20px;
     background: red;
     color: white;
     border: none;
@@ -86,7 +86,7 @@ toggle.addEventListener("click", () => {
 
 /* Open Button Position */
 #open-btn {
-    left: 20px;
+    left: 22px;
 }
 
 /* Sidebar Active */
