@@ -61,7 +61,7 @@ h2 {
 
 @keyframes typing {
     from {
-        width: 0ch;
+        width: 1ch;
     }
 }
 
@@ -74,7 +74,8 @@ h2 {
 
 <h1 class="animate_animated"
            animate_zoomIn
-           animate_infinite">Hello!</h1>
+           animate_infinite">
+</h1>
 
 .btn {
   display: inline-block;
@@ -94,7 +95,7 @@ h2 {
 footer {
   text-align: center;
   padding: 1rem;
-  background: rgba(0, 0, 0, 7);
+  background: rgba(0, 0, 0, 0, 7);
   position: center;
 }
 
