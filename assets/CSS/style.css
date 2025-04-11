@@ -121,3 +121,32 @@ img {
 .glowing-button {
     margin-bottom: 50px;
 }
+
+body{
+    display: flex;
+    background-image: url(assets/img/indexBGC.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+input{
+    display: none;
+}
+label{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+label>i{
+    color:black;
+    font-size: 50px;
+}
+.container{
+    position: fixed;
+    top: 10%;
+    left: -300%;
+    width: 290%;
+    height: 100vh;
+    background: #640ae276;
+}
