@@ -1,62 +1,200 @@
-<!DOCTYPE html
-<html data-bs-theme="light" lang="en" style="width: auto;height: auto;background: rgb(30,30,30);">
+<!DOCTYPE html>
+<html lang="en" style="width: auto; height: auto; background: rgb(30,30,30);">
 <head>
-<body>
-    <div id="sidebar">
-    <div id="sidebar-header">
-        <img src="your-logo.png" alt="Nexus Logo">
-    </div>
-    <button id="close-btn">&times;</button>
-    <a href="index.html"><i class="fas fa-home"></i> Home</a>
-    <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login <span class="soon">(SOON)</span></a>
-    <a href="ps3.html"><i class="fab fa-playstation"></i> PS3 Content</a>
-    <a href="About Us.html"><i class="fas fa-link"></i> About Us</a>
-    <a href="What's New.html"><i class="fas fa-star"></i> What's New</a>
-</div>
-<button id="open-btn">☰</button>
-    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Nexus Website, By DescZ!</title
-    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/Bungee.css">
-    <link rel="stylesheet" href="assets/style.css">
+    <title>NEXUS WEBSITE</title>
+    <link rel"website icon" type="profile"
+    href="assets/icons/menuIcon.png"
+
+</head>
+<body>
+    <input type="checkbox" id="input">
+    <label for="input">
+        <i class="bi bi-list"></i>
+    </label>
+    <div class="container">
+    <ul>
+       <li>
+        <a href="#"><i class="bi bi-speedmeter2"></i>Other Websites!</a>
+       </li>
+       <li>
+        <a href="#"><i class="bi bi-link"></i>PS3 Mods</a>
+       </li>
+       <li>
+        <a href="#"><i class="bi bi-list"></i>Contact Us</a>
+       </li>
+       <li>
+        <a href="#"><i class="bi bi-question"></i>About</a>
+       </li>
+    </ul>
+    </div>
+</body>
+</html>
+
+    <style>
+        p {
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Bungee.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/icons/menuIcon.png">
 </head>
 
-<body style="font-family: Bungee, serif;background: url(assets/img/indexBG.jpg) center no-repeat, rgb(30,30,30);">
+<style>
+    .sidebar {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .downloads-section {
+        text-align: center;
+        margin: 50px 0;
+    }
+
+        .downloads-section h2 {
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+
+    .glowing-button {
+        display: inline-block;
+        font-size: 35px;
+        font-weight: bold;
+        color: whitesmoke;
+        text-decoration: none;
+        padding: 15px 30px;
+        margin: 10px;
+        border-radius: 5px;
+        transition: 0.3s ease-in-out;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+        .glowing-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+        }
+
+    .btn-1 {
+        background-color: #ff0000;
+    }
+
+        .btn-1:hover {
+            background-color: #ff6f47;
+        }
+
+    .btn-2 {
+        background-color: #33b5ff;
+    }
+
+        .btn-2:hover {
+            background-color: #55c3ff;
+        }
+
+    .btn-3 {
+        background-color: #9b33ff;
+    }
+
+        .btn-3:hover {
+            background-color: #b455ff;
+        }
+
+    .toggle-container {
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .toggle-switchs {
+        position: fixed;
+        display: inline-block;
+        width: 30px;
+        height: 24px;
+    }
+
+        .toggle-switchs input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 34px;
+    }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+    input:checked + .slider {
+        background-color: #2196F3;
+    }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+    .toggle-label {
+        margin-left: 10px;
+        color: white;
+        font-size: 18px;
+    }
+</style>
+
+<body style="font-family: Bungee, serif; background: url('assets/img/indexBG.jpg') center no-repeat; background-size: cover;">
     <header>
         <div class="hero">
-            <h1 style="margin-top: 100px;">Welcome To Nexus Website!</h1>
-            <p>Custom Backups and SPRXs!</p>
+            <h1 style="margin-top: 30px; color: white; text-align: center;">Welcome to Minecraft Legacy Website!</h1>
+            <p>Best & Powerful Minecraft Mods!</p>
         </div>
     </header>
+
     <main>
-        <section id="downloads">
+        <section class="downloads-section">
             <h2>Downloads</h2>
-            <div class="buttons">
-                
-<a class="btn" role="button" href="https://www.mediafire.com/file/6otxly6ox6vbr8d/HEN_Ultimate_SPRX_Installer_V3_By_DescZ.pkg/file">
-    Ultimate SPRX Installer V3</a>
-                
-<a class="btn" role="button" href="https://www.mediafire.com/file/vmvi1406p8078bn/Minecraft_Java_1.8_Edition_By_DescZ_%2528NPUB%2529.pkg/file">          
-    Minecraft Java Backup PS3</a>
-                
-<a class="btn" role="glowing-button" href="#">
-    Java Optimizor V1.1.0 By EternalModz</a>
-            </div>
+
+            <a class="glowing-button btn-1" href="download-section.html">
+               NEXUS download Page
+            </a>
+            <a class="glowing-button btn-2" href="https://www.mediafire.com/file/6otxly6ox6vbr8d/HEN_Ultimate_SPRX_Installer_V3_By_DescZ.pkg/file">
+                Ultimate SPRX Installer V3
+            </a>
+            <a class="glowing-button btn-3" href="https://www.mediafire.com/file/vmvi1406p8078bn/Minecraft_Java_1.8_Edition_By_DescZ_%2528NPUB%2529.pkg/file">
+                Minecraft Java Backup PS3
+            </a>
+            <a class="glowing-button btn-4" href="https://github.com/EternalModz/4JRE/releases/tag/v1.1.0">
+                Java Optimizer V1.1    
+            </a>
         </section>
     </main>
-    <footer>
-        <p style="color: cyan; ">Developed By DescZ!</p>
-
-        <p style="color: yellow; ">Helper - EternalModz</p>
-
-        <p style="color: orange; ">Copyright 2025 - 2026</p>
-
-        <p style="color: blue; ">All Rights Reserved</p>
-    </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/JavaScript.js"></script>
-    <script src="assets/smoothscroll.js"></script>
 </body>
 </html>
