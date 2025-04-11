@@ -1,101 +1,27 @@
-﻿/* General Styles */
-<script>
+/* General Styles */
+<script >
 const toggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 toggle.addEventListener("click", () => {
     menu.style.display = menu.style.display === "center" ? "none" : "flex";
 });
 </script>
+      
 
-/* Sidebar Container */
-#sidebar {
-    width: 280px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -350px;
-    background: rgba(15, 15, 15, 0.95);
-    box-shadow: 2px 0 10px rgba(255, 0, 0, 0.5);
-    transition: 0.4s ease-in-out;
-    padding-top: 20px;
-    text-align: center;
-    overflow-y: auto;
+    from {
+        background: red;
+    }
+
+    to {
+        background: yellow;
+    }
 }
 
-/* Sidebar Header (Logo) */
-#sidebar-header img {
-    width: auto;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    border: 3px solid red;
+@-moz-keyframes  moveBackground { {
 }
 
-/* Sidebar Links */
-#sidebar a {
-    display: block;
-    font-size: 18px;
-    color: white;
-    padding: 12px;
-    text-decoration: none;
-    transition: 0.3s;
-    border-radius: 8px;
-    margin: 8px;
-    background: rgba(255, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+@-webkit-keyframes  moveBackground { {
 }
-
-#sidebar a i {
-    font-size: 20px;
-}
-
-#sidebar a:hover {
-    background: red;
-    color: black;
-}
-
-/* "Soon" Text */
-.soon {
-    color: red;
-    font-size: 14px;
-    margin-left: 5px;
-}
-
-/* Open & Close Buttons */
-#open-btn, #close-btn {
-    font-size: 20px;
-    background: red;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    position: fixed;
-    top: 0px;
-    left: -250px;
-    z-index: 1000;
-}
-
-#close-btn {
-    right: 20px;
-    top: 10px;
-    position: absolute;
-}
-
-/* Open Button Position */
-#open-btn {
-    left: 22px;
-}
-
-/* Sidebar Active */
-.sidebar-active {
-    left: 0 !important;
-}
-
-<meta name="theme-color"
-    content="#ff5733">
 
 .label .input:checked ~ .title {
     opacity: 0;
@@ -115,6 +41,7 @@ body {
   margin: 0;
   padding: 0;
   color: #fff;
+  color: #fff;
   text-align: center;
 }
 
@@ -130,28 +57,18 @@ header {
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1,2rem;
   margin-bottom: 2rem;
 }
 
 main {
   padding: 2rem;
-  text-padding: 1rem;
+  text-align: 1rem;
 }
 
 h2 {
-  width: 20ch;
-  font-family: monospace;
-  text-wrap: nowrap;
-  overflow: hidden;
-  animation: typing 2s steps(20) infinite 
-  alternate-reverse;
-}
-
-@keyframes typing {
-    from {
-        width: 1ch;
-    }
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .buttons {
@@ -161,15 +78,10 @@ h2 {
   gap: 1rem;
 }
 
-<h1 class="animate_animated"
-           animate_zoomIn
-           animate_infinite">
-</h1>
-
 .btn {
-  display: inline-block;
+  display: block;
   padding: 0.8rem 1.5rem;
-  font-size: 1rem;
+  font-size: 2rem;
   background: #808080;
   color: white;
   text-decoration: none;
@@ -177,7 +89,7 @@ h2 {
   transition: background 0.3s ease;
 }
 
-.btn: hover {
+.btn:hover {
   background: #e91e63;
 }
 
@@ -185,21 +97,23 @@ footer {
   text-align: center;
   padding: 1rem;
   background: rgba(0, 0, 0, 0, 7);
-  position: center;
+  position: relative;
 }
 
 img {
-    max-width: auto;
-    height: auto;
+    max-width: 100vh;
+    height: 100vh;
+    object-fit: cover;
 }
 
-.downloads-section {
-    display: flex;
+.donwloads-section {
+    display: block;
     flex-direction: column;
     align-items: center;
+    padding: 10px 20px;
 }
 
 .glowing-button {
-    margin-bottom: 20px;
-    text-align: 10px;
+    margin-bottom: 50px;
 }
+
