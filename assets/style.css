@@ -56,6 +56,10 @@ header {
   margin-bottom: 0.5rem;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 .hero p {
   font-size: 1,2rem;
   margin-bottom: 2rem;
