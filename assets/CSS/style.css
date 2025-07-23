@@ -7,24 +7,13 @@ toggle.addEventListener("click", () => {
 </script>
       
 
-    from {
-        text-align: red;
-    }
-
-    to {
-        background: yellow;
-    }
-
 html {
     scroll-behavior: smooth;
 }
 
-html {
-   system: fixed;
-}
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, serif;
   margin: 0;
   padding: 0;
   color: #fff;
@@ -82,21 +71,13 @@ h2 {
 
 footer {
   text-align: center;
-  padding: 40px;
-  position: relative;
-  background-image: url('assets/img/indexDD.png');
-  background-size: 100% 100%;
-  background-repeat: repeat-x;
-  background-position: 0 0;
-  background-attachment: fixed;
-
-  animation: moveBg 20s linear infinite;
-  padding: 20px;
+  padding: 0;
+  color: white;
 }
 
 img {
-    max-width: 100vh;
-    height: 100vh;
+    max-width: auto;
+    height: auto;
     object-fit: cover;
 }
 
@@ -118,10 +99,11 @@ html, body {
 }
 
    body {
-        background-size: auto;
+        background-size: cover;
+        font-family: Arial, sans-serif;
         background-repeat: repeat-x;
-        background-attachment: fixed;
-        background-position: auto;
+        text-align: center;
+        color: white;
 
         animation: moveBg 20s linear infinite;
     }
@@ -135,19 +117,13 @@ html, body {
         }
     }
 
-.custom-btn {
-  display: block;
-  margin: 10px auto;
-  width: 200px;
-  font-size: 16px;
-  background: rgba(0, 0, 0, 0, 7);
-  color: white;
-  padding: 12px;
-  border: 2px solid white;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3 ease;
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
   text-decoration: none;
 }
 
