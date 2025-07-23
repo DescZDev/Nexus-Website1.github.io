@@ -86,7 +86,7 @@
         }
 </style>
 
-<body style="font-family: Bungee, serif; background: url('assets/img/indexBGC.png') center repeat; background-size: 100% 100%;">
+<body style="font-family: Bungee, serif; background: url('assets/img/indexBGC.png') center repeat; background-size: cover;">
     <header>
         <div class="hero">
             <h1 style="margin-top: 30px; color: rgb(235, 0, 0); text-align: center;">Welcome to Minecraft Legacy Website!</h1>
@@ -109,3 +109,16 @@
             </a>
         </section>
     </main>
+        <script>
+        let bgX = 0;
+
+        function moveBackground() {
+        bgX -= 0.5;
+
+        document.getElementById("bgBody").style.backgroundPosition = '${bgX}px 0';
+
+        requestAnimationFrame(moveBackground);
+        }
+
+        moveBackground();
+    </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="width: 100%; height: 100%; background: rgb(30,30,30);">
+<html lang="en" style="width: auto; height: auto; background: rgb(30,30,30);">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -7,20 +7,19 @@
 </head>
 </html>
 
-    <style>
-        p {
-            font-size: 20px;
-            color: white;
-            text-align: center;
-            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
-        }
-    </style>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Bungee.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <style>
+           p {
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+        }
+
     body {
         margin: 0;
         font-family: 'Segoe', sans-serif;
@@ -30,11 +29,6 @@
     footer {
         padding: 50px 30px;
         text-align: center;
-        background-image: url('assets/img/indexDD.png');
-        background-size: 100% 100%;
-        background-position: 0 0;
-        background-repeat: repeat-x;
-
     }
 
     footer h3 {
@@ -83,14 +77,13 @@
     }
 
     .downloads-section {
-        text-align: center;
-        margin: 40px 0;
+        margin: 50px 20px;
     }
 
         .downloads-section h2 {
             color: white;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-            margin-bottom: 10px;
+            margin-bottom: 30px;
         }
 
     .glowing-button {
@@ -107,7 +100,7 @@
     }
 
         .glowing-button:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
         }
 
@@ -145,41 +138,48 @@
 
 </style>
 
-<body style="font-family: Bungee, serif; background: url('assets/img/indexDD.png') center repeat; background-size: 100% 100%;">
+<body style="font-family: Arial, sans-serif; background: url('assets/img/indexDD.png') center repeat; background-size: cover;">
     <header>
         <div class="hero">
-            <h1 style="margin-top: 30px; color: rgb(235, 0, 0); text-align: center;">Welcome to Minecraft Legacy Website!</h1>
+            <h1 style="margin-top: 30px; color: rgb(243, 160, 160); text-align: center;">Welcome to Minecraft Legacy Website!</h1>
             <p>Best & Powerful Minecraft Mods and Backups!</p>
         </div>
     </header>
 
     <main>
-        <section class="downloads-section">
+        <div class="button-container">
             <h2>Downloads</h2>
 
-            <a class="glowing-button btn-1" href="download-section.html">
-               Nexus Backup Download
-            </a>
-            <a class="glowing-button btn-4" href="https://www.mediafire.com/file/lpuh01f7ba5uh1f/">
-                Java Optimizer SPRX
-            </a>
-            <a class="glowing-button btn-3" href="Soon!"">
-                Nexus Studio (Soon)
-            </a>
-            <a class="custom-btn btn-4" href="tool-section.html">
-                Minecraft SPRX Installer 
-            </a>
-        </section>
+            <a class="glowing-button btn-1" href="download-section.html">Nexus Backup Download</a>
+            <a class="glowing-button btn-4" href="https://www.mediafire.com/file/lpuh01f7ba5uh1f/">Java Optimizer SPRX</a>
+            <a class="glowing-button btn-3" href="Soon!"">Nexus Studio (Soon)</a>
+            <a class="glowing-button btn-4" href="tool-section.html">Minecraft Ultimate Tool</a>
+
+        </div>
     </main>
-    <footer class="site-footer"> 
+    <footer> 
 
         <h3 style="color: white;">About Us</h3>
         <p>Nexus Website is an Minecraft Mods and backup hosting for PS3</p>
 
         <h3 style="color: white;">Credits</h3>
-        <p><a href="#" style="color: #be1818; text-decoration: none;">DescZ - Website & Studio Developer</a></p>
+        <p><a style="color: #be1818; text-decoration: none;">DescZ - Website & Studio Developer</a></p>
 
-        <p style="margin-bottom: 30px; font-size: 14px; color: #888;">&copy: 2025 DescZDev All rights reserved.<br>Developed By <b style="color: white;">DescZ</b></p>
+        <p style="margin-bottom: 0; font-size: 14px; color: #888;">&copy: 2025 DescZDev All rights reserved.<br>Developed By <b style="color: white;">DescZ</b></p>
     </footer>
+
+    <script>
+        let bgX = 0;
+
+        function moveBackground() {
+        bgX -= 0.5;
+
+        document.getElementById("bgBody").style.backgroundPosition = '${bgX}px 0';
+
+        requestAnimationFrame(moveBackground);
+        }
+
+        moveBackground();
+    </script>
 </body>
 </html>
