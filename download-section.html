@@ -118,51 +118,6 @@
             background-color: #b455ff;
         }
 
-    .toggle-container {
-        position: fixed;
-        top: 30px;
-        right: 20px;
-        display: flex;
-        align-items: center;
-    }
-
-    .toggle-switchs {
-        position: fixed;
-        display: inline-block;
-        width: 30px;
-        height: 24px;
-    }
-
-        .toggle-switchs input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-    .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ccc;
-        transition: 0.4s;
-        border-radius: 34px;
-    }
-
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: 0.4s;
-            border-radius: 50%;
-        }
-
     input:checked + .slider {
         background-color: #2196F3;
     }
@@ -178,13 +133,12 @@
     }
 </style>
 
-<body style="font-family: Bungee, serif; background: url('assets/img/indexIMG.jpg') center no-repeat; background-size: cover;">
+<body style="font-family: Bungee, serif; background: url('assets/img/indexBG.jpg') center repeat; background-size: 100% 100%;">
     <header>
         <div class="hero">
             <h1 style="margin-top: 50px; color: 
-            <link ref="title image" 
-            href="assets/nexus/nexus.png">
-            <p>Nexus Backups!</p>
+            <link ref="title image"></h1>
+            <p>Nexus Backup Download</p>
         </div>
     </header>
 
@@ -199,8 +153,7 @@
     </main>
     `
     <footer style="text-align: center; padding: 1px; color: white;">
-        <p style="color: orange;">Developed By DescZ</p>
-        <p style="glowing-button;">All rights reserved</p>
+        <p style="glowing-button;">Latest Nexus Backup Release!</p>
     </footer>
 </body>
 </html>
