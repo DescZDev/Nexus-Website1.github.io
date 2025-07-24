@@ -101,6 +101,7 @@
 
         .glowing-button:hover {
             transform: scale(1.05);
+            text-decoration: none;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
         }
 
@@ -139,6 +140,10 @@
 </style>
 
 <body style="font-family: Arial, sans-serif; background: url('assets/img/indexDD.png') center repeat; background-size: cover;">
+    <div class="bg-container">
+        <div class="bg-image" id="movingBg"></div>
+    </div>
+
     <header>
         <div class="hero">
             <h1 style="margin-top: 30px; color: rgb(243, 160, 160); text-align: center;">Welcome to Minecraft Legacy Website!</h1>
@@ -169,5 +174,13 @@
 
         <p style="margin-bottom: 0; font-size: 14px; color: #888;">&copy: 2025 DescZDev All rights reserved.<br>Developed By <b style="color: white;">DescZ</b></p>
     </footer>
+
+    <script src="assets/css/script.js"></script>
+    <script>
+        if (typeof initApp === 'Undefined') {
+            document.write('<script src="local-fallBack.js"><\/script>');
+        }
+    </script>
+
 </body>
 </html>
