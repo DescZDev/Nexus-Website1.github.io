@@ -87,7 +87,7 @@
         }
 
     .glowing-button {
-        display: inline-block;
+        display: block;
         font-size: 30px;
         font-weight: bold;
         color: whitesmoke;
@@ -95,7 +95,7 @@
         padding: 15px 30px;
         margin: 10px;
         border-radius: 5px;
-        transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in;
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     }
 
@@ -137,6 +137,49 @@
             background-color: #0fe4eb
         }
 
+        /* Sidebar styling */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -200px;
+      width: 200px;
+      height: 100%;
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      transition: left 0.3s ease;
+    }
+
+    .sidebar a {
+      display: block;
+      margin: 15px 0;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .sidebar a:hover {
+      color: #00afff;
+    }
+
+    /* Toggle button */
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #333;
+      color: white;
+      padding: 10px 15px;
+      cursor: pointer;
+      border: none;
+      font-size: 16px;
+      z-index: 1000;
+    }
+
+    .sidebar.open {
+      left: 0;
+
+
 </style>
 
 <body style="font-family: Arial, sans-serif; background: url('assets/img/indexDD.png') center repeat; background-size: cover;">
@@ -144,11 +187,21 @@
         <div class="bg-image" id="movingBg"></div>
     </div>
 
+<button class="toggle-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+  <div class="sidebar" id="sidebar">
+    <h2>Links</h2>
+    <a href="https://discord.gg/2JCW7NXJsy" target="_blank">Join Discord</a>
+    <a href="https://www.youtube.com/@DescZMC" target="_blank">YouTube Channel</a>
+  </div>
+
+
+
     <header>
         <div class="hero">
-            <h1 style="margin-top: 30px; color: rgb(243, 160, 160); text-align: center;">Welcome to Minecraft Legacy Website!</h1>
+            <h1 style="margin-top: 30px; color: rgb(243, 160, 160); text-align: center;">Welcome to <d style="color: #3f74ff;">Nexus Website</d></h1>
             <p>Best & Powerful Minecraft Mods and Backups!</p>
-        </div>
+        </div> 
     </header>
 
     <main>
@@ -166,21 +219,21 @@
     </main>
     <footer> 
 
-        <h3 style="color: white;">About Us</h3>
-        <p>Nexus Website is an Minecraft Mods and backup hosting for PS3</p>
+        <h3 style="color: white;">(beta <d style="color: #be1818;">Website)</d></h3>
+        <p>Welcome to <b style="color: white">Nexus <b style="color: gray;">Website!</b></b></p>
 
-        <h3 style="color: white;">Credits</h3>
-        <p><a style="color: #be1818; text-decoration: none;">DescZ - Website & Studio Developer</a></p>
+        <h3 style="color: white;">By</h3>
+        <p><a style="color: #be1818; text-decoration: none;">DescZ - <b style="color: snow;">Website </b>Developer</a></p>
 
         <p style="margin-bottom: 0; font-size: 14px; color: #888;">&copy: 2025 DescZDev All rights reserved.<br>Developed By <b style="color: white;">DescZ</b></p>
     </footer>
 
     <script src="assets/CSS/script.js"></script>
-    <script>
-        if (typeof initApp === 'Undefined') {
-            document.write('<script src="local-fallBack.js"><\/script>');
-        }
-    </script>
 
+    <script>
+          function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle("open")
+    }
+    </script>
 </body>
 </html>
