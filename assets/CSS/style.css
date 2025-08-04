@@ -14,6 +14,15 @@ body {
   text-align: center;
 }
 
+.sidebar {
+  left: -250;
+}
+
+.sidebar.open {
+  left: 0;
+  transition: left 0.3 ease;
+}
+
 .bg-container {
   position: fixed;
   top: 0;
