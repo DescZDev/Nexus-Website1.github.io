@@ -140,14 +140,16 @@
         /* Sidebar styling */
     .sidebar {
       position: fixed;
-      top: 0;
-      left: -200px;
-      width: 200px;
+      top: 1%;
+      left: -260px;
+      width: 250px;
       height: 100%;
       background-color: #222;
       color: white;
       padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.5);
       transition: left 0.3s ease;
+      z-index: 100;
     }
 
     .sidebar a {
@@ -162,22 +164,44 @@
       color: #00afff;
     }
 
-    /* Toggle button */
-    .toggle-btn {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      background-color: #333;
-      color: white;
-      padding: 10px 15px;
-      cursor: pointer;
-      border: none;
-      font-size: 16px;
-      z-index: 1000;
-    }
+.sidebar.open {
+  left: 0;
+}
 
-    .sidebar.open {
-      left: 0;
+.sidebar h2 {
+    margin-top: 0;
+    color: #00afff;
+}
+
+.sidebar a {
+    display: block;
+    margin: 15px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar a:hover {
+    color: #00afff;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px; 
+    background-color: #222;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 16px;
+}
+
+.content {
+    padding: 80px 20px;
+    text-align: center;
+}
 
 
 </style>
@@ -187,18 +211,22 @@
         <div class="bg-image" id="movingBg"></div>
     </div>
 
-<button class="toggle-btn" onclick="toggleSidebar()">☰ Menu</button>
+<button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
   <div class="sidebar" id="sidebar">
     <h2>Links</h2>
-    <a href="https://discord.gg/2JCW7NXJsy" target="_blank">Join Discord</a>
+    <a href="https://discord.gg/2JCW7NXJsy" target="_blank">Join Discord server</a>
     <a href="https://www.youtube.com/@DescZMC" target="_blank">YouTube Channel</a>
-  </div>
+    <h2>_____________</h2>
+    <h2>Best <d style="color: #0fe4eb;">Modding</d> Websites</h2>
+    <a style="offset-block-start: auto;" href="https://sites.google.com/view/Im-virusmike-exe/home-page">ImVirus<d style="color: gray;">Mike</d></a>
+    <h2>_____________</h2>
+  </div> 
 
 
 
     <header>
-        <div class="hero">
+        <div class="content">
             <h1 style="margin-top: 30px; color: rgb(243, 160, 160); text-align: center;">Welcome to <d style="color: #3f74ff;">Nexus Website</d></h1>
             <p>Best & Powerful Minecraft Mods and Backups!</p>
         </div> 
@@ -232,8 +260,9 @@
 
     <script>
           function toggleSidebar() {
-      document.getElementById('sidebar').classList.toggle("open")
+      document.getElementById("sidebar").classList.toggle("open");
     }
     </script>
+
 </body>
 </html>
