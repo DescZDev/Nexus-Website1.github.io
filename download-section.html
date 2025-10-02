@@ -125,51 +125,9 @@
             justify-content: space-between;
             z-index: 1001;
         }
-
-        .tool-strip button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        #sidebar {
-            position: fixed;
-            top: 50px;
-            left: -250px;
-            width: 250px;
-            height: calc(100% - 50px);
-            background: black;
-            transition: left 0.3s ease;
-            padding: 15px;
-            z-index: 1000;
-        }
-
-        #sidebar.active {
-            left: 0;
-        }
-
-        #sidebar a {
-            display: block;
-            padding: 8px 0;
-            color: white;
-            text-decoration: none;
-        }
     </style>
 </head>
 <body style="font-family: Bungee, serif; background: url('assets/img/indexBG.jpg') center repeat; background-size: cover;">
-    <div class="tool-strip">
-        <button id="toggle-btn" class="toggle-btn">☰</button>
-        <span id="online-count"></span>
-    </div>
-    <div id="sidebar" class="sidebar">
-        <h3>Menu</h3>
-        <a href="index.html">Home</a>
-        <a href="tool-section.html">Ultimate Tool</a>
-        <a href="customBackupSection.html">Custom Backups</a>
-        <a href="#">Contact</a>
-    </div>
     <img src="assets/img/title1.png" class="top-image" alt="Top Image">
     <header>
         <div class="hero"></div>
