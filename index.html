@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA WEBSITE</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Bungee.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+
+    <style>
+        p {
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe', sans-serif;
+            background: transparent;
+        }
+
+        footer {
+            padding: 50px 30px;
+            text-align: center;
+        }
+
+        footer h3 {
+            color: #fff;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        footer p {
+            margin: 10px 0;
+            color: #ccc;
+        }
+
+        .credits a {
+            display: block;
+            color: #3f74ff;
+            text-decoration: none;
+            margin: 5px 0;
+            font-weight: bold;
+        }
+
+        .credits a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-contact a {
+            color: #ccc;
+            text-decoration: none;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        .footer-contact a:hover {
+            color: #ccc;
+            border-bottom: 1px solid #fff;
+        }
+
+        .footer-bottom {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .footer-bottom b {
+            color: #fff;
+        }
+
+        .downloads-section {
+            margin: 50px 20px;
+        }
+
+        .downloads-section h2 {
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            margin-bottom: 30px;
+        }
+
+        .glowing-button {
+            display: block;
+            font-size: 30px;
+            font-weight: bold;
+            color: whitesmoke;
+            text-decoration: none;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 5px;
+            transition: 0.3s ease-in;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .glowing-button:hover {
+            transform: scale(1.05);
+            text-decoration: none;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+        }
+
+        .btn-1 {
+            background-color: #ff070700;
+        }
+
+        .btn-1:hover {
+            background-color: #f83f0c;
+        }
+
+        .btn-2 {
+            background-color: #0fe4eb00;
+        }
+
+        .btn-2:hover {
+            background-color: #0aa3f5;
+        }
+
+        .btn-3 {
+            background-color: #9c33ff00;
+        }
+
+        .btn-3:hover {
+            background-color: #c07cf5;
+        }
+
+        .btn-4 {
+            background-color: #f83f0c00;
+        }
+
+        .btn-4:hover {
+            background-color: #0fe4eb
+        }
+
+        .tool-strip {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: #222;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            justify-content: space-between;
+            z-index: 1001;
+        }
+
+        .tool-strip button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #sidebar {
+            position: fixed;
+            top: 50px;
+            left: -250px;
+            width: 250px;
+            height: calc(100% - 50px);
+            background: black;
+            transition: left 0.3s cubic-bezier(.77,0,.18,1);
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        #sidebar.active {
+            left: 0;
+        }
+
+        #sidebar a {
+            display: block;
+            padding: 8px 0;
+            color: white;
+            text-decoration: none;
+        }
+
+        #sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            z-index: 1000;
+        }
+
+        #close-sidebar {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animated background -->
+    <div class="bg-container">
+        <div class="bg-image" id="movingBg"></div>
+    </div>
+
+    <!-- Top bar -->
+    <div class="tool-strip">
+        <button id="toggle-btn" class="toggle-btn" aria-label="Open menu">☰</button>
+    </div>
+
+    <!-- Sidebar overlay and sidebar -->
+    <div id="sidebar-overlay"></div>
+    <nav id="sidebar" aria-label="Sidebar menu">
+        <button id="close-sidebar" aria-label="Close sidebar">&times;</button>
+        <h3>Menu</h3>
+        <a href="https://discord.gg/2JCW7NXJsy" target="_blank" rel="noopener">Discord server</a>
+        <a href="https://www.youtube.com/@DesscZ" target="_blank" rel="noopener">YouTube channel</a>
+        <a href="https://discord.gg/2JCW7NXJsy" target="_blank" rel="noopener">Contact</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="content">
+            <h1>
+                <span style="color: #3f74ff;">NOVA WEBSITE</span>
+            </h1>
+            <p>Best & Powerful Minecraft Mods and Backups!</p>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <section class="download-section">
+            <div class="button-container">
+                <h2>Downloads</h2>
+                <a class="glowing-button btn-1" href="download-section.html">Nexus Backup Download</a>
+                <a class="glowing-button btn-4" href="customBackupSection.html">Download Custom Minecraft Backups</a>
+                <a class="glowing-button btn-2" href="https://github.com/DescZDev/Nova_Studio" target="_blank" rel="noopener">Nova Studio</a>
+                <a class="glowing-button btn-4" href="tool-section.html">Minecraft Ultimate Tool</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h3>(beta <span style="color: #be1818;">Website</span>)</h3>
+        <p>Welcome to <b style="color: white;">Nova <span style="color: gray;">Website!</span></b></p>
+        <h3>By</h3>
+        <p><span style="color: #be1818;">DescZ - <b style="color: snow;">Website Developer</b></span></p>
+        <p style="margin-bottom: 0; font-size: 14px; color: #888;">
+            &copy; 2025 DescZDev All rights reserved.<br>
+            Developed By <b style="color: white;">DescZ</b>
+        </p>
+    </footer>
+
+    <script src="assets/CSS/script.js"></script>
+</body>
+</html>
